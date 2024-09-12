@@ -1,0 +1,6 @@
+ELEMENTS_IN_FILE="./listFromFile.txt"
+
+while IFS= read -r ELEMENT
+do
+  echo $ELEMENT
+done < $ELEMENTS_IN_FILE

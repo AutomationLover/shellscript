@@ -1,0 +1,17 @@
+
+
+
+context="ABC is three letters."
+
+echo ${#context}
+
+echo ${context:2:6}      # "C is t"
+echo ${context:2}        # "C is three letters."
+
+# FInd index
+word="three"
+expr index "$context" "$word"
+expr index "abcde" "cd"  # 3
+
+# Replace //
+echo ${context/ABC/DEF}  # "DEF is three letters."

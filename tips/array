@@ -1,0 +1,30 @@
+#!/bin/bash
+
+files=("f1.txt" "f2.txt" "f3.txt" "f4.txt" "f5.txt")
+
+echo ${files[4]} ${files[3]} ${files[2]} ${files[1]} ${files[0]} 
+
+# elliot@allsafe:~$ ./array
+# f5.txt f4.txt f3.txt f2.txt f1.txt
+
+echo ${files[*]}
+# f1.txt f2.txt f3.txt f4.txt f5.txt
+
+echo ${#files[@]}
+# 5
+
+files[0]="a.txt"
+echo ${files[*]}
+# a.txt f2.txt f3.txt f4.txt f5.txt
+
+files+=("newf.txt")
+echo ${files[*]}
+# a.txt f2.txt f3.txt f4.txt f5.txt newf.txt
+
+unset files[2]
+echo ${files[*]}
+# a.txt f2.txt f4.txt f5.txt newf.txt
+
+unset files
+echo ${files[*]}
+#

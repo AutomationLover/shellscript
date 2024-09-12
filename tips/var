@@ -1,0 +1,24 @@
+# $0
+# The name of the bash script.
+# $1, $2 … $n
+# The bash script arguments.
+# $$
+# The process id of the current shell.
+# $#
+# The total number of arguments passed to the script.
+# $@
+# The value of all arguments passed to the script.
+# $?
+# The exit status of the last executed command.
+# $!
+# The process id of the last executed command.
+# run ./var v1 v2 v3
+echo $$     # 29471
+echo $#     # 3
+echo $@     # v1 v2 v3
+echo $?     # 0
+echo $!     
+# run ./var v1 v2 v3
+# 
+# source var
+# 0

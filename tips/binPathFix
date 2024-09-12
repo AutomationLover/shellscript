@@ -1,0 +1,25 @@
+# BASH_SOURCE[0], is the current script or function, 
+# while BASH_SOURCE[1] would be the caller of the current script or function, 
+echo ${BASH_SOURCE[0]}
+# output "./binPathFix"
+
+echo ${BASH_SOURCE[1]}
+# output ""
+
+dirname "${BASH_SOURCE[0]}"
+# output "." when run under tips/
+# output "./tips" when run root of this repo
+
+cd "$(dirname "${BASH_SOURCE[0]}")/.."  
+# assume this script loc in repo is in bin/
+# the above go to repo root folder
+pwd
+# output "/Users/wwang2/github/shellscript"
+# "/Users/wwang2/github/shellscript" is the path of this repo
+
+cd "$(dirname "${BASH_SOURCE[0]}")"  
+# assume this script loc in repo is in bin/
+# the above go to repo root folder
+pwd
+# output "/Users/wwang2/github/shellscript/tips"
+
